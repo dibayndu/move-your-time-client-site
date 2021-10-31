@@ -1,0 +1,8 @@
+.hover .card:hover{
+    background-color: skyblue;
+    transition: ease-in;
+
+}
+.hover .card{
+    height: 270px;
+}
