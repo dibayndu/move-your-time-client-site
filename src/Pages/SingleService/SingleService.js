@@ -6,7 +6,7 @@ const SingleService = () => {
     const {id} = useParams();
     const [singlePackage, setSinglePackage] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${id}`)
+        fetch(`https://shrieking-broomstick-47761.herokuapp.com/service/${id}`)
         .then(res=>res.json())
         .then(data => setSinglePackage(data))
     })
