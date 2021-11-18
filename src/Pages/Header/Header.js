@@ -19,13 +19,19 @@ const Header = () => {
                     >
                     <Nav.Link as={Link} to={"/home"}>Home</Nav.Link>
                     <Nav.Link as={Link} to={"/sevices"}>Services</Nav.Link>
-                    <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
                     <Nav.Link as={Link} to={"/contact"}>Contact</Nav.Link>
                 </Nav>
                     </Navbar.Collapse>
-                    {user?.email ?
-<Button onClick={logOut} variant="primary">Log Out</Button> :
-    <Nav.Link as={Link} to="/login" className="text-white">Log In</Nav.Link>
+                    {user?.email ? (
+                        <>
+                        <Nav.Link style={{color:"white"}} as={Link} to={"/home"}>my orders</Nav.Link>
+                        <Nav.Link style={{color:"white"}} as={Link} to={"/home"}>manage all order</Nav.Link>
+                        <Nav.Link style={{color:"white"}} as={Link} to={"/home"}>add new service</Nav.Link>
+                            <span style={{color: "white", marginRight: "5px"}}>Hello, {user?.displayName} </span> 
+                            <Button onClick={logOut} variant="primary">Log Out</Button> 
+                        </>
+                    ) : 
+                    <Nav.Link as={Link} to="/login" className="text-white">Log In</Nav.Link>
 
 }
 {/* {
